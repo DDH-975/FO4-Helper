@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1E1E1E"
+    android:padding="16dp">
+
+    <!-- 플레이어 vs 텍스트 -->
+    <TextView
+        android:id="@+id/tv_playerVs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#333333"
+        android:padding="8dp"
+        android:text="독일팬임   vs   울산술집"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:fontFamily="@font/do_hyeon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 점유율 텍스트 -->
+    <TextView
+        android:id="@+id/tv_possession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#444444"
+        android:padding="8dp"
+        android:text="52% 점유율 48%"
+        android:textColor="#B2B2B2"
+        android:textSize="18sp"
+        android:fontFamily="@font/do_hyeon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_playerVs" />
+
+    <!-- 슈팅 텍스트 -->
+    <TextView
+        android:id="@+id/tv_shootTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#333333"
+        android:padding="8dp"
+        android:text="5   슈팅   5"
+        android:textColor="#FFCC00"
+        android:textSize="18sp"
+        android:fontFamily="@font/do_hyeon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_possession" />
+
+    <!-- 유효슈팅 텍스트 -->
+    <TextView
+        android:id="@+id/tv_effectiveShootTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#444444"
+        android:padding="8dp"
+        android:text="5  유효슈팅  8"
+        android:textColor="#1E90FF"
+        android:textSize="18sp"
+        android:fontFamily="@font/do_hyeon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shootTotal" />
+
+    <!-- 드리블 텍스트 -->
+    <TextView
+        android:id="@+id/tv_dribble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#333333"
+        android:padding="8dp"
+        android:text="67  드리블  66"
+        android:textColor="#32CD32"
+        android:textSize="18sp"
+        android:fontFamily="@font/do_hyeon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_effectiveShootTotal" />
+
+    <!-- 오프사이드 텍스트 -->
+    <TextView
+        android:id="@+id/tv_offsideCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#444444"
+        android:padding="8dp"
+        android:text="2  오프사이드  2"
+        android:textColor="#FF6347"
+        android:textSize="18sp"
+        android:fontFamily="@font/do_hyeon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dribble" />
+
+    <!-- 옐로우 카드 텍스트 -->
+    <TextView
+        android:id="@+id/tv_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#333333"
+        android:padding="8dp"
+        android:text="3  옐로우카드  4"
+        android:textColor="#FFDD00"
+        android:textSize="18sp"
+        android:fontFamily="@font/do_hyeon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_offsideCount" />
+
+    <!-- 레드 카드 텍스트 -->
+    <TextView
+        android:id="@+id/tv_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#444444"
+        android:padding="8dp"
+        android:text="0  레드카드  0"
+        android:textColor="#ff0000"
+        android:textSize="18sp"
+        android:fontFamily="@font/do_hyeon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_yellow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
