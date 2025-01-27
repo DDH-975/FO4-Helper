@@ -1,4 +1,4 @@
-package com.project.fifamanagerdata;
+package com.project.fifamanagerdata.navigation;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -18,6 +18,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.project.fifamanagerdata.R;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
