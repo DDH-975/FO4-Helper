@@ -1,4 +1,4 @@
-package com.project.fifamanagerdata;
+package com.project.fifamanagerdata.navigation;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,13 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class SearchManager extends Fragment {
+import com.project.fifamanagerdata.R;
+
+public class SearchPlayer extends Fragment {
     private View view;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.search_manager,container,false);
+        view = inflater.inflate(R.layout.search_player, container, false);
         return view;
     }
 
