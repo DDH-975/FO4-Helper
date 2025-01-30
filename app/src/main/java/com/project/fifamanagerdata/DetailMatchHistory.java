@@ -32,7 +32,7 @@ import retrofit2.Retrofit;
 public class DetailMatchHistory extends AppCompatActivity {
     private RetrofitApi retrofitApi;
     private Retrofit retrofit;
-    private String ouid;
+    private String ouid, nickname;
     private int matchType;
     private String Apikey = BuildConfig.Apikey;
     private List<String> matchIds = new ArrayList<>();
@@ -44,7 +44,6 @@ public class DetailMatchHistory extends AppCompatActivity {
     private LinearLayoutManager linearLayoutManager;
     private ArrayList<String> matchIdList = new ArrayList<>();
     private TextView tv_noData;
-    private ArrayList<MatchData> matchDataList = new ArrayList<>();
 
 
     /*********************************************************************************
@@ -99,10 +98,6 @@ public class DetailMatchHistory extends AppCompatActivity {
                 public void onResponse(Call<MatchData> call, Response<MatchData> response) {
                     MatchData data = response.body();
                     if (data != null) {
-                        // 매치 정보가 성공적으로 받아졌을 때 로그 출력
-                        Log.i("getDeatailMatch", "성공 유저명 : " + data.getMatchInfo().get(0).getNickname());
-                        matchDataList.add(data);
-
                         // 매치 결과 계산
                         String score = data.getMatchInfo().get(0).getShoot().getGoalTotalDisplay() + " : " +
                                 data.getMatchInfo().get(1).getShoot().getGoalTotalDisplay();
@@ -110,7 +105,8 @@ public class DetailMatchHistory extends AppCompatActivity {
                         // RecyclerView에 추가할 데이터 생성
                         RecylerViewData rvData = new RecylerViewData(data.getMatchDate(),
                                 data.getMatchInfo().get(0).getNickname(),
-                                data.getMatchInfo().get(1).getNickname(), score, data);
+                                data.getMatchInfo().get(1).getNickname(), score,
+                                data,data.getMatchInfo().get(0).getMatchDetail().getMatchEndType(),nickname);
 
                         // 데이터 리스트에 추가하고 RecyclerView 갱신
                         recylerViewData.add(0, rvData);
@@ -125,11 +121,6 @@ public class DetailMatchHistory extends AppCompatActivity {
             });
         }
     }
-
-    public ArrayList<MatchData> returenMatchData (){
-        return matchDataList;
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,6 +152,7 @@ public class DetailMatchHistory extends AppCompatActivity {
         Intent getIntent = getIntent();
         ouid = getIntent.getStringExtra("ouid");
         matchType = getIntent.getIntExtra("matchtype", -2);
+        nickname = getIntent.getStringExtra("nickname");
 
         Log.d("DetailMatchHistory.class", "getUoid : " + ouid + " matchType : " + matchType);
 
@@ -182,4 +174,7 @@ public class DetailMatchHistory extends AppCompatActivity {
         // 매치 ID 요청
         getMatchId();
     }
+
+
+
 }

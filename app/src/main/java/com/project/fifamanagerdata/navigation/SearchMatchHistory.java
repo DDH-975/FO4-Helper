@@ -125,7 +125,8 @@ public class SearchMatchHistory extends Fragment {
             @Override
             public void onClick(View view) {
                 String nickname = tv_searchPlayer.getText().toString();
-                uoidRequester = new UoidRequester(nickname, retrofitApi);
+                String noSpaces = nickname.replaceAll("\\s", "");
+                uoidRequester = new UoidRequester(noSpaces, retrofitApi);
                 uoidRequester.getuoid(new UoidRequester.UoidCallback() {
                     @Override
                     public void onSuccess(String ouid) {
@@ -133,6 +134,7 @@ public class SearchMatchHistory extends Fragment {
                             String getUoid = ouid;
                             Log.d("SearchMatchHistory", "받은 uoid: " + ouid);
                             Intent intent = new Intent(view.getContext(), DetailMatchHistory.class);
+                            intent.putExtra("nickname",noSpaces);
                             intent.putExtra("ouid", getUoid);
                             intent.putExtra("matchtype", matchtype);
                             startActivity(intent);

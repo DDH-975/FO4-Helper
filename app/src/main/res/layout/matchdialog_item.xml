@@ -3,136 +3,716 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#1E1E1E"
-    android:padding="16dp">
+    android:layout_height="wrap_content">
 
-    <!-- 플레이어 vs 텍스트 -->
-    <TextView
-        android:id="@+id/tv_playerVs"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="#333333"
-        android:padding="8dp"
-        android:text="독일팬임   vs   울산술집"
-        android:textColor="#FFFFFF"
-        android:textSize="23sp"
-        android:fontFamily="@font/do_hyeon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- 점유율 텍스트 -->
-    <TextView
-        android:id="@+id/tv_possession"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="#444444"
-        android:padding="8dp"
-        android:text="52% 점유율 48%"
-        android:textColor="#B2B2B2"
-        android:textSize="18sp"
-        android:fontFamily="@font/do_hyeon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_playerVs" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E1E1E"
+            android:padding="16dp">
 
-    <!-- 슈팅 텍스트 -->
-    <TextView
-        android:id="@+id/tv_shootTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="#333333"
-        android:padding="8dp"
-        android:text="5   슈팅   5"
-        android:textColor="#FFCC00"
-        android:textSize="18sp"
-        android:fontFamily="@font/do_hyeon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_possession" />
 
-    <!-- 유효슈팅 텍스트 -->
-    <TextView
-        android:id="@+id/tv_effectiveShootTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="#444444"
-        android:padding="8dp"
-        android:text="5  유효슈팅  8"
-        android:textColor="#1E90FF"
-        android:textSize="18sp"
-        android:fontFamily="@font/do_hyeon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_shootTotal" />
+            <!-- 플레이어 vs 텍스트 -->
+            <TextView
+                android:id="@+id/tv_playerVs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#333333"
+                android:fontFamily="@font/do_hyeon"
+                android:padding="8dp"
+                android:text="독일팬임   vs   울산술집"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- 드리블 텍스트 -->
-    <TextView
-        android:id="@+id/tv_dribble"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="#333333"
-        android:padding="8dp"
-        android:text="67  드리블  66"
-        android:textColor="#32CD32"
-        android:textSize="18sp"
-        android:fontFamily="@font/do_hyeon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_effectiveShootTotal" />
+            <!-- 점유율 텍스트 -->
+            <TextView
+                android:id="@+id/tv_possession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#444444"
+                android:fontFamily="@font/do_hyeon"
+                android:padding="8dp"
+                android:text="52% 점유율 48%"
+                android:textColor="#B2B2B2"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_playerVs" />
 
-    <!-- 오프사이드 텍스트 -->
-    <TextView
-        android:id="@+id/tv_offsideCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="#444444"
-        android:padding="8dp"
-        android:text="2  오프사이드  2"
-        android:textColor="#FF6347"
-        android:textSize="18sp"
-        android:fontFamily="@font/do_hyeon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_dribble" />
+            <!-- 슈팅 텍스트 -->
+            <TextView
+                android:id="@+id/tv_shootTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#333333"
+                android:fontFamily="@font/do_hyeon"
+                android:padding="8dp"
+                android:text="5   슈팅   5"
+                android:textColor="#FFCC00"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_possession" />
 
-    <!-- 옐로우 카드 텍스트 -->
-    <TextView
-        android:id="@+id/tv_yellow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="#333333"
-        android:padding="8dp"
-        android:text="3  옐로우카드  4"
-        android:textColor="#FFDD00"
-        android:textSize="18sp"
-        android:fontFamily="@font/do_hyeon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_offsideCount" />
+            <!-- 유효슈팅 텍스트 -->
+            <TextView
+                android:id="@+id/tv_effectiveShootTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#444444"
+                android:fontFamily="@font/do_hyeon"
+                android:padding="8dp"
+                android:text="5  유효슈팅  8"
+                android:textColor="#1E90FF"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shootTotal" />
 
-    <!-- 레드 카드 텍스트 -->
-    <TextView
-        android:id="@+id/tv_red"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="#444444"
-        android:padding="8dp"
-        android:text="0  레드카드  0"
-        android:textColor="#ff0000"
-        android:textSize="18sp"
-        android:fontFamily="@font/do_hyeon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_yellow" />
+            <!-- 드리블 텍스트 -->
+            <TextView
+                android:id="@+id/tv_dribble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#333333"
+                android:fontFamily="@font/do_hyeon"
+                android:padding="8dp"
+                android:text="67  드리블  66"
+                android:textColor="#32CD32"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_effectiveShootTotal" />
+
+            <!-- 오프사이드 텍스트 -->
+            <TextView
+                android:id="@+id/tv_offsideCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#444444"
+                android:fontFamily="@font/do_hyeon"
+                android:padding="8dp"
+                android:text="2  오프사이드  2"
+                android:textColor="#FF6347"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dribble" />
+
+            <!-- 옐로우 카드 텍스트 -->
+            <TextView
+                android:id="@+id/tv_yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#333333"
+                android:fontFamily="@font/do_hyeon"
+                android:padding="8dp"
+                android:text="3  옐로우카드  4"
+                android:textColor="#FFDD00"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_offsideCount" />
+
+            <!-- 레드 카드 텍스트 -->
+            <TextView
+                android:id="@+id/tv_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#444444"
+                android:fontFamily="@font/do_hyeon"
+                android:padding="8dp"
+                android:text="0  레드카드  0"
+                android:textColor="#ff0000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_yellow" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/squad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#1E1E1E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_red">
+
+                <TextView
+                    android:id="@+id/tv_squadPlayer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#333333"
+                    android:fontFamily="@font/do_hyeon"
+                    android:padding="8dp"
+                    android:text="독일팬임 스쿼드"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_squadPlayer1"
+                    app:srcCompat="@drawable/football_field" />
+
+                <ImageView
+                    android:id="@+id/img_LW"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginEnd="65dp"
+                    app:layout_constraintEnd_toStartOf="@+id/img_ST"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <ImageView
+                    android:id="@+id/img_LS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/img_ST"
+                    app:layout_constraintTop_toTopOf="@+id/img_ST" />
+
+                <ImageView
+                    android:id="@+id/img_CF"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="9dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_ST" />
+
+                <ImageView
+                    android:id="@+id/img_LF"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LS"
+                    app:layout_constraintTop_toBottomOf="@+id/img_LS" />
+
+                <ImageView
+                    android:id="@+id/img_RF"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RS"
+                    app:layout_constraintTop_toBottomOf="@+id/img_RS" />
+
+                <ImageView
+                    android:id="@+id/img_RS"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/img_ST"
+                    app:layout_constraintTop_toTopOf="@+id/img_ST" />
+
+                <ImageView
+                    android:id="@+id/img_AM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="164dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <ImageView
+                    android:id="@+id/img_RAM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="35dp"
+                    app:layout_constraintStart_toEndOf="@+id/img_AM"
+                    app:layout_constraintTop_toTopOf="@+id/img_AM" />
+
+                <ImageView
+                    android:id="@+id/img_LAM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="35dp"
+                    app:layout_constraintEnd_toStartOf="@+id/img_AM"
+                    app:layout_constraintTop_toTopOf="@+id/img_AM" />
+
+                <ImageView
+                    android:id="@+id/img_LM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LW"
+                    app:layout_constraintTop_toTopOf="@+id/img_RM" />
+
+                <ImageView
+                    android:id="@+id/img_LCM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="70dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LAM"
+                    app:layout_constraintTop_toBottomOf="@+id/img_LAM" />
+
+                <ImageView
+                    android:id="@+id/img_LDM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LCM"
+                    app:layout_constraintTop_toBottomOf="@+id/img_LCM" />
+
+                <ImageView
+                    android:id="@+id/img_LWB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LM"
+                    app:layout_constraintTop_toTopOf="@+id/img_SW" />
+
+                <ImageView
+                    android:id="@+id/img_LB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LWB"
+                    app:layout_constraintTop_toTopOf="@+id/img_LCB" />
+
+                <ImageView
+                    android:id="@+id/img_LCB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="-25dp"
+                    android:layout_marginTop="450dp"
+                    app:layout_constraintStart_toEndOf="@+id/img_LDM"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <ImageView
+                    android:id="@+id/img_DM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_CM" />
+
+                <ImageView
+                    android:id="@+id/img_RDM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RCM"
+                    app:layout_constraintTop_toBottomOf="@+id/img_CM" />
+
+                <ImageView
+                    android:id="@+id/img_RWB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RM"
+                    app:layout_constraintTop_toTopOf="@+id/img_SW" />
+
+                <ImageView
+                    android:id="@+id/img_RB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RWB"
+                    app:layout_constraintTop_toTopOf="@+id/img_RCB" />
+
+                <ImageView
+                    android:id="@+id/img_RCB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="450dp"
+                    android:layout_marginEnd="-25dp"
+                    app:layout_constraintEnd_toStartOf="@+id/img_RDM"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <ImageView
+                    android:id="@+id/img_CB"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_SW" />
+
+                <ImageView
+                    android:id="@+id/img_GK"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="512dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <ImageView
+                    android:id="@+id/img_SW"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="390dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <ImageView
+                    android:id="@+id/img_RM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="100dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RW"
+                    app:layout_constraintTop_toBottomOf="@+id/img_RW" />
+
+                <ImageView
+                    android:id="@+id/img_RCM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="70dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RAM"
+                    app:layout_constraintTop_toBottomOf="@+id/img_RAM" />
+
+                <ImageView
+                    android:id="@+id/img_CM"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="70dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_AM" />
+
+                <ImageView
+                    android:id="@+id/img_RW"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="75dp"
+                    app:layout_constraintStart_toEndOf="@+id/img_ST"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <ImageView
+                    android:id="@+id/img_ST"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="45dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/squad2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#1E1E1E"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/squad">
+
+                <TextView
+                    android:id="@+id/tv_squadPlayer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#333333"
+                    android:fontFamily="@font/do_hyeon"
+                    android:padding="8dp"
+                    android:text="울산팬임 스쿼드"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_squadPlayer2"
+                    app:srcCompat="@drawable/football_field" />
+
+                <ImageView
+                    android:id="@+id/img_LW2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginEnd="65dp"
+                    app:layout_constraintEnd_toStartOf="@+id/img_ST2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <ImageView
+                    android:id="@+id/img_LS2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toStartOf="@+id/img_ST2"
+                    app:layout_constraintTop_toTopOf="@+id/img_ST2" />
+
+                <ImageView
+                    android:id="@+id/img_CF2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="9dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_ST2" />
+
+                <ImageView
+                    android:id="@+id/img_LF2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LS2"
+                    app:layout_constraintTop_toBottomOf="@+id/img_LS2" />
+
+                <ImageView
+                    android:id="@+id/img_RF2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RS2"
+                    app:layout_constraintTop_toBottomOf="@+id/img_RS2" />
+
+                <ImageView
+                    android:id="@+id/img_RS2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/img_ST2"
+                    app:layout_constraintTop_toTopOf="@+id/img_ST2" />
+
+                <ImageView
+                    android:id="@+id/img_AM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="164dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <ImageView
+                    android:id="@+id/img_RAM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="35dp"
+                    app:layout_constraintStart_toEndOf="@+id/img_AM2"
+                    app:layout_constraintTop_toTopOf="@+id/img_AM2" />
+
+                <ImageView
+                    android:id="@+id/img_LAM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="35dp"
+                    app:layout_constraintEnd_toStartOf="@+id/img_AM2"
+                    app:layout_constraintTop_toTopOf="@+id/img_AM2" />
+
+                <ImageView
+                    android:id="@+id/img_LM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LW2"
+                    app:layout_constraintTop_toTopOf="@+id/img_RM2" />
+
+                <ImageView
+                    android:id="@+id/img_LCM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="70dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LAM2"
+                    app:layout_constraintTop_toBottomOf="@+id/img_LAM2" />
+
+                <ImageView
+                    android:id="@+id/img_LDM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LCM2"
+                    app:layout_constraintTop_toBottomOf="@+id/img_LCM2" />
+
+                <ImageView
+                    android:id="@+id/img_LWB2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LM2"
+                    app:layout_constraintTop_toTopOf="@+id/img_SW2" />
+
+                <ImageView
+                    android:id="@+id/img_LB2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_LWB2"
+                    app:layout_constraintTop_toTopOf="@+id/img_LCB2" />
+
+                <ImageView
+                    android:id="@+id/img_LCB2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="-25dp"
+                    android:layout_marginTop="450dp"
+                    app:layout_constraintStart_toEndOf="@+id/img_LDM2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <ImageView
+                    android:id="@+id/img_DM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_CM2" />
+
+                <ImageView
+                    android:id="@+id/img_RDM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RCM2"
+                    app:layout_constraintTop_toBottomOf="@+id/img_CM2" />
+
+                <ImageView
+                    android:id="@+id/img_RWB2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RM2"
+                    app:layout_constraintTop_toTopOf="@+id/img_SW2" />
+
+                <ImageView
+                    android:id="@+id/img_RB2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RWB2"
+                    app:layout_constraintTop_toTopOf="@+id/img_RCB2" />
+
+                <ImageView
+                    android:id="@+id/img_CB2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_SW2" />
+
+                <ImageView
+                    android:id="@+id/img_RCB2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="450dp"
+                    android:layout_marginEnd="-25dp"
+                    app:layout_constraintEnd_toStartOf="@+id/img_RDM2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <ImageView
+                    android:id="@+id/img_GK2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="512dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <ImageView
+                    android:id="@+id/img_SW2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="390dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <ImageView
+                    android:id="@+id/img_RM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="100dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RW2"
+                    app:layout_constraintTop_toBottomOf="@+id/img_RW2" />
+
+                <ImageView
+                    android:id="@+id/img_RCM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="70dp"
+                    app:layout_constraintStart_toStartOf="@+id/img_RAM2"
+                    app:layout_constraintTop_toBottomOf="@+id/img_RAM2" />
+
+                <ImageView
+                    android:id="@+id/img_CM2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="70dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/img_AM2" />
+
+                <ImageView
+                    android:id="@+id/img_RW2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="75dp"
+                    app:layout_constraintStart_toEndOf="@+id/img_ST2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <ImageView
+                    android:id="@+id/img_ST2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="45dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

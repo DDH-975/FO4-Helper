@@ -34,4 +34,3 @@ public interface RetrofitApi {
       @Query("matchid") String matchid
     );
 }
-

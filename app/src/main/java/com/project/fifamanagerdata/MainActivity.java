@@ -13,17 +13,15 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.project.fifamanagerdata.navigation.FeeCalculation;
-import com.project.fifamanagerdata.navigation.SearchManager;
 import com.project.fifamanagerdata.navigation.SearchMatchHistory;
-import com.project.fifamanagerdata.navigation.SearchPlayer;
+import com.project.fifamanagerdata.navigation.FavoritesPlayer;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bnView;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
-    private SearchManager searchManager;
     private SearchMatchHistory searchMatchHistory;
-    private SearchPlayer searchPlayer;
+    private FavoritesPlayer favoritesPlayer;
     private FeeCalculation feeCalculation;
 
     @Override
@@ -32,9 +30,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         bnView = (BottomNavigationView) findViewById(R.id.bottomNav);
-        searchManager = new SearchManager();
         searchMatchHistory = new SearchMatchHistory();
-        searchPlayer = new SearchPlayer();
+        favoritesPlayer = new FavoritesPlayer();
         feeCalculation = new FeeCalculation();
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
@@ -42,16 +39,13 @@ public class MainActivity extends AppCompatActivity {
         bnView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.search_manager) {
+                if (item.getItemId() == R.id.search_match_history) {
                     setView(0);
-                } else if (item.getItemId() == R.id.search_match_history) {
+                } else if (item.getItemId() == R.id.Favorites_player) {
                     setView(1);
-                } else if (item.getItemId() == R.id.search_player) {
-                    setView(2);
                 } else if (item.getItemId() == R.id.fee_calculation) {
-                    setView(3);
+                    setView(2);
                 }
-
                 return true;
             }
         });
@@ -67,18 +61,14 @@ public class MainActivity extends AppCompatActivity {
 
         switch (n) {
             case 0:
-                fragmentTransaction.replace(R.id.main_frame, searchManager);
-                fragmentTransaction.commit();
-                break;
-            case 1:
                 fragmentTransaction.replace(R.id.main_frame, searchMatchHistory);
                 fragmentTransaction.commit();
                 break;
-            case 2:
-                fragmentTransaction.replace(R.id.main_frame, searchPlayer);
+            case 1:
+                fragmentTransaction.replace(R.id.main_frame, favoritesPlayer);
                 fragmentTransaction.commit();
                 break;
-            case 3:
+            case 2:
                 fragmentTransaction.replace(R.id.main_frame, feeCalculation);
                 fragmentTransaction.commit();
                 break;

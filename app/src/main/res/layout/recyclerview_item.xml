@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="30dp"
         android:fontFamily="@font/do_hyeon"
         android:text="울산술집"
         android:textColor="#42A5F5"
@@ -58,7 +58,6 @@
         android:text="2 : 3"
         android:textColor="#1EB31E"
         android:textSize="28sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_player1" />
@@ -78,4 +77,23 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_score" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-11dp"
+        android:layout_marginBottom="-12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_player1"
+        app:layout_constraintStart_toEndOf="@+id/tv_player1" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-11dp"
+        android:layout_marginBottom="-12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_player2"
+        app:layout_constraintStart_toEndOf="@+id/tv_player2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

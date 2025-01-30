@@ -1,4 +1,5 @@
 package com.project.fifamanagerdata.dataClass;
+
 import java.util.List;
 
 public class MatchData {
@@ -44,6 +45,7 @@ public class MatchData {
         private String nickname;
         private MatchDetail matchDetail;
         private Shoot shoot;
+        private List<Player> player;
 
         // Getters and Setters
         public String getOuid() {
@@ -77,8 +79,15 @@ public class MatchData {
         public void setShoot(Shoot shoot) {
             this.shoot = shoot;
         }
-    }
 
+        public List<Player> getPlayer() {
+            return player;
+        }
+
+        public void setPlayer(List<Player> player) {
+            this.player = player;
+        }
+    }
     public static class MatchDetail {
         private String matchResult;
         private int foul;
@@ -87,6 +96,7 @@ public class MatchData {
         private int dribble;
         private int possession;
         private int offsideCount;
+        private int matchEndType;
 
         // Getters and Setters
         public String getMatchResult() {
@@ -144,6 +154,14 @@ public class MatchData {
         public void setOffsideCount(int offsideCount) {
             this.offsideCount = offsideCount;
         }
+
+        public int getMatchEndType() {
+            return matchEndType;
+        }
+
+        public void setMatchEndType(int matchEndType) {
+            this.matchEndType = matchEndType;
+        }
     }
 
     public static class Shoot {
@@ -176,4 +194,35 @@ public class MatchData {
             this.goalTotalDisplay = goalTotalDisplay;
         }
     }
+
+    public static class Player{
+        private int spId;
+        private int spPosition;
+        private int spGrade;
+
+        public int getSpId() {
+            return spId;
+        }
+
+        public void setSpId(int spId) {
+            this.spId = spId;
+        }
+
+        public int getSpPosition() {
+            return spPosition;
+        }
+
+        public void setSpPosition(int spPosition) {
+            this.spPosition = spPosition;
+        }
+
+        public int getSpGrade() {
+            return spGrade;
+        }
+
+        public void setSpGrade(int spGrade) {
+            this.spGrade = spGrade;
+        }
+    }
+
 }

@@ -9,19 +9,23 @@ public class RecylerViewData {
     private String player1;
     private String player2;
     private String score;
+    private String nickname;
+    private int matchEndType;
     private ArrayList<MatchData> matchData = new ArrayList<>();
 
 
     public RecylerViewData(){}
 
     public RecylerViewData(String matchDate, String player1, String player2,
-                           String score,  MatchData matchData) {
+                           String score,  MatchData matchData, int matchEndType, String nickname) {
 
         this.matchDate = matchDate;
         this.player1 = player1;
         this.player2 = player2;
         this.score = score;
         this.matchData.add(matchData);
+        this.matchEndType = matchEndType;
+        this.nickname = nickname;
 
     }
 
@@ -64,5 +68,21 @@ public class RecylerViewData {
 
     public void setMatchData(ArrayList<MatchData> matchData) {
         this.matchData = matchData;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public int getMatchEndType() {
+        return matchEndType;
+    }
+
+    public void setMatchEndType(int matchEndType) {
+        this.matchEndType = matchEndType;
     }
 }
