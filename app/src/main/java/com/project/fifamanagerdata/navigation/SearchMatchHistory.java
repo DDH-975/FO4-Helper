@@ -41,8 +41,7 @@ public class SearchMatchHistory extends Fragment {
         return view;
     }
 
-    public void ChangeRadioBtnTextColor() {
-
+    public void ChangeRadioBtn() {
         officialMatch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 officialMatch.setTextColor(Color.parseColor("#1EB31E"));
@@ -118,7 +117,7 @@ public class SearchMatchHistory extends Fragment {
         managerMode = (RadioButton) view.findViewById(R.id.managerMode);
         officialMatch = (RadioButton) view.findViewById(R.id.officialMatch);
 
-        ChangeRadioBtnTextColor();
+        ChangeRadioBtn();
 
 
         btn_search.setOnClickListener(new View.OnClickListener() {
@@ -132,7 +131,7 @@ public class SearchMatchHistory extends Fragment {
                     public void onSuccess(String ouid) {
                         if (matchtype != 0) {
                             String getUoid = ouid;
-                            Log.d("SearchMatchHistory", "받은 uoid: " + ouid);
+                            Log.d("SearchMatchHistory", "받은 uoid: " + getUoid);
                             Intent intent = new Intent(view.getContext(), DetailMatchHistory.class);
                             intent.putExtra("nickname",noSpaces);
                             intent.putExtra("ouid", getUoid);
