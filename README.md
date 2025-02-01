@@ -46,47 +46,39 @@
 ### 경기 전적 검색
 <img src="screenshots/home.png" alt="searchHistory" width="200">
 
-- **공식경기**, **감독모드**, **쿨래식 1on1**, **공식친선** 등 다양한 경기 모드를 선택하여, 각 모드에 맞는 **경기 전적**을 확인할 수 있습니다.
+- **공식경기**, **감독모드**, **쿨래식 1on1**, **공식친선** 등 다양한 경기 모드를 선택하여, 각 모드에 맞는 **경기 전적**을 확인할 수 있습니다. <br>
+
 
 <img src="video/historyGIF.gif" alt="App" width="250">
-  
+- 전적검색 실행화면
+  <br>
+  <br>
+  <br>
 
 
-### Home Screen
-<img src="screenshots/home.png" alt="home" width="200">
+### 즐겨찾기 기능
+<img src="screenshots/favoritesPlayer.png" alt="home" width="200">
 
-- 앱 실행 시 보이는 홈 화면.  
-- 세 가지 카테고리(**Success**, **Life**, **Motivation**) 중 하나를 선택할 수 있습니다.
+- **즐겨찾기 기능**을 통해 자주 찾는 유저의 경기 전적을 빠르게 확인할 수 있습니다. <br>
 
+<img src="video/favoritesGIF.gif" alt="App" width="250">
+- 즐겨찾기 기능 실행화면
 
-### Quote Categories
-<img src="screenshots/quotes.png" alt="quotes" width="200">
+<br>
+<br>
+<br>
 
-- 선택한 카테고리에 따라 명언이 표시됩니다.  
-- 예: **Success** 카테고리를 선택한 경우.
+### 수수료 계산기
+**수수료 계산기** 기능을 통해 선수를 판매한 후 실제로 받을 수 있는 금액을 미리 계산할 수 있습니다.
+기본적으로 **40%**의 수수료가 부과되지만, **수수료 쿠폰**을 사용하면 10%에서 최대 40%까지 수수료를 할인받을 수 있습니다.
+또한, **PC방** 이용 시 **30%**, **TopClass**라는 유료 아이템 구매 시 **20%**의 수수료 할인이 제공됩니다. 이 계산기를 통해 다양한 조건을 고려해 판매 금액을 더 많이 받을 수 있는 방법을 확인할 수 있습니다.<br><br>
+<img src="screenshots/feecalculator.png" alt="quotes" width="200">
+- 각 입력금액에 각각의 수수료쿠폰이 사용가능합니다.
+- pc방 할인 및 topClass할인 선택이 가능합니다 <br> <br>
 
-
-### Add Quote
-<img src="screenshots/savenew.png" alt="savenew" width="200">
-
-- 카테고리를 롱 클릭하면 dialog가 출력됩니다.  
-- 새로운 명언을 입력하고 추가 버튼을 클릭하면 데이터베이스에 추가됩니다.
-
-
-### Delete Quote
-<img src="screenshots/optionmenu.png" alt="optionmenu" width="200">
-
-- 오른쪽 상단의 아이콘을 클릭하면 옵션메뉴가 열립니다.
-- 목록을 선택하면 각 카테고리별로 저장된 명언들이 새로운 액티비티에 출력됩니다.
-
-  
-<img src="screenshots/delete.png" alt="delete" width="200">
-
-- 각 명언 항목들을 길게 클릭하면 삭제됩니다.
+<img src="video/calculgif.gif" alt="App" width="250">
+- 수수료 계산기 실행화면
 
 
-## 실행 화면
 
-<img src="video/testvideo.gif" alt="App Demo" width="250">
 
-- 페이드 인/아웃 애니메이션으로 부드럽게 명언이 전환 됩니다.
