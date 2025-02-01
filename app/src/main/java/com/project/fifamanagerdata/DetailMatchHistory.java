@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.fifamanagerdata.dataClass.MatchData;
+import com.project.fifamanagerdata.favoritesPlayerRoomDB.PlayerDao;
 import com.project.fifamanagerdata.recyclerViewPackage.RecyclerViewAdapter;
 import com.project.fifamanagerdata.recyclerViewPackage.RecylerViewData;
 
@@ -46,9 +47,7 @@ public class DetailMatchHistory extends AppCompatActivity {
     private TextView tv_noData;
 
 
-    /*********************************************************************************
-     * *********************    매치 아이디 요청    ************************************
-     ********************************************************************************/
+    //매치 아이디 요청
     public void getMatchId() {
         // Retrofit을 사용하여 매치 ID 요청
         retrofitApi.getMatchId(Apikey, ouid, matchType, 0, 50).enqueue(new Callback<List<String>>() {
@@ -87,9 +86,7 @@ public class DetailMatchHistory extends AppCompatActivity {
     }
 
 
-    /*********************************************************************************
-     * ************************    매치 상세 기록 조회   ********************************
-     ********************************************************************************/
+    //매치 상세 기록 조회
     public void getDetailMatch(ArrayList<String> matchIdList) {
         // 매치 ID마다 상세 정보를 요청
         for (String matchIddata : matchIdList) {
@@ -106,7 +103,9 @@ public class DetailMatchHistory extends AppCompatActivity {
                         RecylerViewData rvData = new RecylerViewData(data.getMatchDate(),
                                 data.getMatchInfo().get(0).getNickname(),
                                 data.getMatchInfo().get(1).getNickname(), score,
-                                data,data.getMatchInfo().get(0).getMatchDetail().getMatchEndType(),nickname);
+                                data, data.getMatchInfo().get(0).getMatchDetail().getMatchEndType(), nickname,
+                                data.getMatchInfo().get(0).getOuid(),
+                                data.getMatchInfo().get(1).getOuid());
 
                         // 데이터 리스트에 추가하고 RecyclerView 갱신
                         recylerViewData.add(0, rvData);
@@ -160,6 +159,7 @@ public class DetailMatchHistory extends AppCompatActivity {
         retrofit = NetworkClient.getRetrofitClient(DetailMatchHistory.this);
         retrofitApi = retrofit.create(RetrofitApi.class);
 
+
         // RecyclerView 설정
         recyclerView = (RecyclerView) findViewById(R.id.recylerV);
         recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL));
@@ -173,8 +173,7 @@ public class DetailMatchHistory extends AppCompatActivity {
 
         // 매치 ID 요청
         getMatchId();
+
+
     }
-
-
-
 }
