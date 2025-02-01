@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         favoritesPlayer = new FavoritesPlayer();
         feeCalculation = new FeeCalculation();
 
+
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
         bnView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
