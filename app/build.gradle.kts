@@ -64,6 +64,8 @@ dependencies {
     implementation(libs.recyclerview)
     implementation(libs.legacy.support.v4)
     implementation(libs.glide)
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
     annotationProcessor(libs.glide.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
