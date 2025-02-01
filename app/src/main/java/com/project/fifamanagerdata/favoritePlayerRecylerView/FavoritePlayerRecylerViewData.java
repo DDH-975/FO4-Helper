@@ -11,6 +11,7 @@ public class FavoritePlayerRecylerViewData {
 
 
     public String getFBplayer() {
+
         return FBplayer;
     }
 
