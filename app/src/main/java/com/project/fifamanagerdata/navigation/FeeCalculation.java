@@ -77,7 +77,7 @@ public class FeeCalculation extends Fragment {
             @Override
             public void onClick(View view) {
                 String str1, str2;
-                int amountint = 0;
+                long amountint = 0;
                 double couponDiscount = 0;
                 double coupon = 0;
                 double Basicfee = 0;
@@ -85,7 +85,7 @@ public class FeeCalculation extends Fragment {
                 double feetotal = 0;
                 double finalAmount = 0;
                 double finalFee = 0;
-                int total = 0;
+                long total = 0;
                 double PC = 0;
                 double TOPCLASS = 0;
 
@@ -96,8 +96,8 @@ public class FeeCalculation extends Fragment {
                         str2 = editTextList2.get(i).getText().toString().replace(",", "");
 
                         if (!str1.isEmpty() && str2.isEmpty()) {
-                            total += Integer.parseInt(str1);
-                            amountint = Integer.parseInt(str1);
+                            total += Long.parseLong(str1);
+                            amountint = Long.parseLong(str1);
 
                             // 기본수수료
                             Basicfee = amountint * 0.4;
@@ -114,14 +114,14 @@ public class FeeCalculation extends Fragment {
                             // 최종 금액 계산
                             finalAmount += amountint - finalFee;
                         } else if (!str1.isEmpty() && !str2.isEmpty()) {
-                            total += Integer.parseInt(str1);
-                            amountint = Integer.parseInt(str1);
+                            total += Long.parseLong(str1);
+                            amountint = Long.parseLong(str1);
 
                             // 기본수수료
                             Basicfee = amountint * 0.4;
 
                             // 쿠폰 할인
-                            couponDiscount = Integer.parseInt(str2) / 100.0; // 쿠폰 할인율
+                            couponDiscount = Long.parseLong(str2) / 100.0; // 쿠폰 할인율
                             coupon = Basicfee * couponDiscount; // 쿠폰 할인 금액
 
                             // PC 및 TOPCLASS 할인을 적용
@@ -143,8 +143,8 @@ public class FeeCalculation extends Fragment {
                         str1 = editTextList1.get(i).getText().toString().replace(",", "");
                         str2 = editTextList2.get(i).getText().toString().replace(",", "");
                         if (!str1.isEmpty() && str2.isEmpty()) {
-                            total += Integer.parseInt(str1);
-                            amountint = Integer.parseInt(str1);
+                            total += Long.parseLong(str1);
+                            amountint = Long.parseLong(str1);
 
                             // 기본수수료
                             Basicfee = amountint * 0.4;
@@ -160,14 +160,14 @@ public class FeeCalculation extends Fragment {
                             // 최종 금액 계산
                             finalAmount += amountint - finalFee;
                         } else if (!str1.isEmpty() && !str2.isEmpty()) {
-                            total += Integer.parseInt(str1);
-                            amountint = Integer.parseInt(str1);
+                            total += Long.parseLong(str1);
+                            amountint = Long.parseLong(str1);
 
                             // 기본수수료
                             Basicfee = amountint * 0.4;
 
                             // 쿠폰 할인
-                            couponDiscount = Integer.parseInt(str2) / 100.0; // 쿠폰 할인율
+                            couponDiscount = Long.parseLong(str2) / 100.0; // 쿠폰 할인율
                             coupon = Basicfee * couponDiscount; // 쿠폰 할인 금액
 
                             // PC 할인을 적용
@@ -189,8 +189,8 @@ public class FeeCalculation extends Fragment {
                         str1 = editTextList1.get(i).getText().toString().replace(",", "");
                         str2 = editTextList2.get(i).getText().toString().replace(",", "");
                         if (!str1.isEmpty() && str2.isEmpty()) {
-                            total += Integer.parseInt(str1);
-                            amountint = Integer.parseInt(str1);
+                            total += Long.parseLong(str1);
+                            amountint = Long.parseLong(str1);
 
                             // 기본수수료
                             Basicfee = amountint * 0.4;
@@ -206,14 +206,14 @@ public class FeeCalculation extends Fragment {
                             // 최종 금액 계산
                             finalAmount += amountint - finalFee;
                         } else if (!str1.isEmpty() && !str2.isEmpty()) {
-                            total += Integer.parseInt(str1);
-                            amountint = Integer.parseInt(str1);
+                            total += Long.parseLong(str1);
+                            amountint = Long.parseLong(str1);
 
                             // 기본수수료
                             Basicfee = amountint * 0.4;
 
                             // 쿠폰 할인
-                            couponDiscount = Integer.parseInt(str2) / 100.0; // 쿠폰 할인율
+                            couponDiscount = Long.parseLong(str2) / 100.0; // 쿠폰 할인율
                             coupon = Basicfee * couponDiscount; // 쿠폰 할인 금액
 
                             // TOPCLASS 할인을 적용
@@ -234,20 +234,20 @@ public class FeeCalculation extends Fragment {
                         str1 = editTextList1.get(i).getText().toString().replace(",", "");
                         str2 = editTextList2.get(i).getText().toString().replace(",", "");
                         if (!str1.isEmpty() && str2.isEmpty()) {
-                            total += Integer.parseInt(str1);
-                            amountint = Integer.parseInt(str1);
+                            total += Long.parseLong(str1);
+                            amountint = Long.parseLong(str1);
                             Basicfee = amountint * 0.4;
                             totalfee += Basicfee;
                             finalAmount += amountint - Basicfee;
                         } else if (!str1.isEmpty() && !str2.isEmpty()) {
-                            total += Integer.parseInt(str1);
-                            amountint = Integer.parseInt(str1);
+                            total += Long.parseLong(str1);
+                            amountint = Long.parseLong(str1);
 
                             // 기본수수료
                             Basicfee = amountint * 0.4;
 
                             // 쿠폰 할인
-                            couponDiscount = Integer.parseInt(str2) / 100.0;
+                            couponDiscount = Long.parseLong(str2) / 100.0;
                             feetotal = Basicfee * (1 - couponDiscount);
 
                             totalfee += feetotal;
@@ -257,8 +257,8 @@ public class FeeCalculation extends Fragment {
                 }
 
                 amount.setText("원래 금액 : " + numberFormat.format(total) + "BP");
-                fee.setText("총 수수료 : " + numberFormat.format((int) totalfee) + "BP");
-                resultTV.setText("최종 받는 금액 : " + numberFormat.format((int) finalAmount) + "BP");
+                fee.setText("총 수수료 : " + numberFormat.format((long) totalfee) + "BP");
+                resultTV.setText("최종 받는 금액 : " + numberFormat.format((long) finalAmount) + "BP");
 
             }
         });
@@ -267,9 +267,7 @@ public class FeeCalculation extends Fragment {
     }
 
 
-    /***************************************************************
-     *새로운 거래 금액 입력창 추가 메서드
-     ****************************************************************/
+    //새로운 거래 금액 입력창 추가 메서드
     private void addNewInputLayout() {
         //새로운 레이아웃 생성
         LinearLayout newLayout = new LinearLayout(view.getContext());
@@ -322,9 +320,8 @@ public class FeeCalculation extends Fragment {
     }
 
 
-    /***************************************************************
-     *사용자가 값 입력시 1000단위마다 , 찍어주는 클래스 ex)1,000
-     ****************************************************************/
+    // 사용자가 값 입력시 1000단위마다 , 찍어주는 클래스 ex)1,000
+
     public class NumberTextWatcher implements TextWatcher {
         private EditText editText;
 
