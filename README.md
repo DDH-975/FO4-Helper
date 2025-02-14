@@ -49,25 +49,22 @@
 ## Screenshots
 
 ### 경기 전적 검색
-<img src="screenshots/home.png" alt="searchHistory" width="200">
-
-- **공식경기**, **감독모드**, **클래식 1on1**, **공식친선** 등 다양한 경기 모드를 선택하여, 각 모드에 맞는 **경기 전적**을 확인할 수 있습니다. <br>
-
-
-<img src="video/historyGIF.gif" alt="App" width="250">
-- 전적검색 실행화면
+<div style="display: flex; gap: 10px;">
+    <img src="screenshots/home.png" alt="searchHistory" width="225">
+    <img src="video/historyGIF.gif" alt="App" width="225">
+</div>
+- **공식경기, 감독모드, 클래식 1on1, 공식친선 등 다양한 경기 모드를 선택하여, 각 모드에 맞는 경기 전적을 확인할 수 있습니다. <br>
   <br>
   <br>
   <br>
 
 
 ### 즐겨찾기 기능
-<img src="screenshots/favoritesPlayer.png" alt="home" width="200">
-
-- **즐겨찾기 기능**을 통해 자주 찾는 유저의 경기 전적을 빠르게 확인할 수 있습니다. <br>
-
-<img src="video/favoritesGIF.gif" alt="App" width="250">
-- 즐겨찾기 기능 실행화면
+<div style="display: flex; gap: 10px;">
+    <img src="screenshots/favoritesPlayer.png" alt="home" width="225">
+    <img src="video/favoritesGIF.gif" alt="App" width="225">
+</div>
+- **즐겨찾기 기능** 을 통해 자주 찾는 유저의 경기 전적을 빠르게 확인할 수 있습니다. <br>
 
 <br>
 <br>
@@ -77,12 +74,12 @@
 **수수료 계산기** 기능을 통해 선수를 판매한 후 실제로 받을 수 있는 금액을 미리 계산할 수 있습니다.
 기본적으로 **40%** 의 수수료가 부과되지만, **수수료 쿠폰**을 사용하면 10%에서 최대 40%까지 수수료를 할인받을 수 있습니다.
 또한, **PC방** 이용 시 **30%**, **TopClass**라는 유료 아이템 구매 시 **20%** 의 수수료 할인이 제공됩니다. 이 계산기를 통해 다양한 조건을 고려해 판매 금액을 더 많이 받을 수 있는 방법을 확인할 수 있습니다.<br><br>
-<img src="screenshots/feecalculator.png" alt="quotes" width="200">
+<div style="display: flex; gap: 10px;">
+    <img src="screenshots/feecalculator.png" alt="quotes" width="225">
+    <img src="video/calculgif.gif" alt="App" width="225">
+</div>
 - 각 입력금액에 각각의 수수료쿠폰이 사용가능합니다.
 - pc방 할인 및 topClass할인 선택이 가능합니다 <br> <br>
-
-<img src="video/calculgif.gif" alt="App" width="250">
-- 수수료 계산기 실행화면
 
 
 
