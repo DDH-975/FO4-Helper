@@ -78,8 +78,8 @@
     <img src="screenshots/feecalculator.png" alt="quotes" width="225">
     <img src="video/calculgif.gif" alt="App" width="225">
 </div>
-- 각 입력금액에 각각의 수수료쿠폰이 사용가능합니다.
-- pc방 할인 및 topClass할인 선택이 가능합니다 <br> <br>
+- 각 입력금액에 각각의 수수료쿠폰이 사용가능합니다.<br>
+- pc방 할인 및 topClass할인 선택이 가능합니다
 
 
 
