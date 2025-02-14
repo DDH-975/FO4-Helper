@@ -53,7 +53,7 @@
     <img src="screenshots/home.png" alt="searchHistory" width="225">
     <img src="video/historyGIF.gif" alt="App" width="225">
 </div>
-- 공식경기, 감독모드, 클래식 1on1, 공식친선 등 다양한 경기 모드를 선택하여, 각 모드에 맞는 경기 전적을 확인할 수 있습니다. <br>
+● 공식경기, 감독모드, 클래식 1on1, 공식친선 등 다양한 경기 모드를 선택하여, 각 모드에 맞는 경기 전적을 확인할 수 있습니다. <br>
   <br>
   <br>
   <br>
@@ -64,7 +64,7 @@
     <img src="screenshots/favoritesPlayer.png" alt="home" width="225">
     <img src="video/favoritesGIF.gif" alt="App" width="225">
 </div>
-- 즐겨찾기 기능 을 통해 자주 찾는 유저의 경기 전적을 빠르게 확인할 수 있습니다. <br>
+● 즐겨찾기 기능 을 통해 자주 찾는 유저의 경기 전적을 빠르게 확인할 수 있습니다. <br>
 
 <br>
 <br>
@@ -78,8 +78,8 @@
     <img src="screenshots/feecalculator.png" alt="quotes" width="225">
     <img src="video/calculgif.gif" alt="App" width="225">
 </div>
-- 각 입력금액에 각각의 수수료쿠폰이 사용가능합니다.<br>
-- pc방 할인 및 topClass할인 선택이 가능합니다
+● 각 입력금액에 각각의 수수료쿠폰이 사용가능합니다.<br>
+● pc방 할인 및 topClass할인 선택이 가능합니다
 
 
 
