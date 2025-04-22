@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.fifamanagerdata.dataClass.MatchData;
-import com.project.fifamanagerdata.favoritesPlayerRoomDB.PlayerDao;
 import com.project.fifamanagerdata.recyclerViewPackage.RecyclerViewAdapter;
 import com.project.fifamanagerdata.recyclerViewPackage.RecylerViewData;
 
