@@ -21,7 +21,6 @@ import com.bumptech.glide.Glide;
 import com.project.fifamanagerdata.R;
 import com.project.fifamanagerdata.dataClass.MatchData;
 import com.project.fifamanagerdata.favoritesPlayerRoomDB.PlayerDB;
-import com.project.fifamanagerdata.favoritesPlayerRoomDB.PlayerDao;
 import com.project.fifamanagerdata.favoritesPlayerRoomDB.PlayerDataModel;
 
 import java.util.ArrayList;
